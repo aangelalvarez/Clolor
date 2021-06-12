@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/clolor/static/css/main.b3245198.chunk.css",
+    "main.js": "/clolor/static/js/main.b9cf7eda.chunk.js",
+    "main.js.map": "/clolor/static/js/main.b9cf7eda.chunk.js.map",
+    "runtime-main.js": "/clolor/static/js/runtime-main.51b6f8fc.js",
+    "runtime-main.js.map": "/clolor/static/js/runtime-main.51b6f8fc.js.map",
+    "static/js/2.288ed302.chunk.js": "/clolor/static/js/2.288ed302.chunk.js",
+    "static/js/2.288ed302.chunk.js.map": "/clolor/static/js/2.288ed302.chunk.js.map",
+    "index.html": "/clolor/index.html",
+    "static/css/main.b3245198.chunk.css.map": "/clolor/static/css/main.b3245198.chunk.css.map",
+    "static/js/2.288ed302.chunk.js.LICENSE.txt": "/clolor/static/js/2.288ed302.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.51b6f8fc.js",
+    "static/js/2.288ed302.chunk.js",
+    "static/css/main.b3245198.chunk.css",
+    "static/js/main.b9cf7eda.chunk.js"
+  ]
+}
