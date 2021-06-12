@@ -2,6 +2,8 @@
 
 Clolor is a new experience when it comes to time, it is a customizable clock app with over 140 different colors, it allows you to change the font color as well as the background color
 
+You can visit it here: https://angeltech0.github.io/clolor
+
 ### Clolor also includes 3 different modes
 
 1. Clock - A classic clock with 12-hour format that displays hours and minutes
