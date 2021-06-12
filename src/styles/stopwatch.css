@@ -1,0 +1,84 @@
+.stopWatchContainer{
+    width:70vw;
+    height: auto;
+    margin: 0;
+    padding: 15px 30px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.mainStopWatchContent {
+    text-align: center;
+    font-size:12vw;
+    font-weight: 300;
+}
+
+.secondaryStopWatchContent {
+    text-align: center;
+    font-size: 8vw;
+    font-weight: 500;
+}
+
+.stopWatchButton {
+    height: 30px;
+    width: 50px;
+    margin-left: 15px;
+    margin-top:8px;
+    margin-bottom:8px;
+    border-radius: 20px;
+    transition: 0.2s;
+    outline: none;
+    font-weight:normal;
+    border: 0;
+}
+.stopWatchButton:hover {
+    cursor: pointer;
+    width: 60px;
+}
+
+.stopWatchButton:active {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 1000px) {
+    .mainStopWatchContent {
+        text-align: center;
+        font-weight: 200;
+    }
+    .secondaryStopWatchContent {
+        text-align: center;
+        font-size: 6vw;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-height: 320px) and (min-width:400px) {
+    .mainStopWatchContent {
+        text-align: center;
+        font-size:10vw;
+        font-weight: 200;
+    }
+    .secondaryStopWatchContent {
+        text-align: center;
+        font-size: 5vw;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-height: 320px) and (min-width:800px) {
+    .mainStopWatchContent {
+        text-align: center;
+        font-size:7vw;
+        font-weight: 200;
+    }
+    .secondaryStopWatchContent {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 400;
+    }
+}

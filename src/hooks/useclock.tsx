@@ -1,0 +1,56 @@
+import React from 'react';
+import { useState, useEffect } from 'react';
+
+export const useClock = () => {
+
+    const [time, setTime] = useState<Date | string>(noAMPM(new Date()));
+    const [ampm, setAMPM] = useState<Date | string>(isAmPm(new Date()));
+    
+    useEffect (() => {
+        let interval = setInterval(() => updateTime(), 1000);
+
+        return () => {
+            clearInterval(interval);
+        };
+    }, [time]);
+
+    useEffect (() => {
+        let interval = setInterval(() => updateAMPM(), 1000);
+        
+        return () => {
+            clearInterval(interval);
+        };
+    }, [ampm]);
+
+    function updateAMPM(): void {
+        setAMPM(isAmPm(new Date()));
+    }
+
+    function isAmPm(date: Date): string {
+        let currAMPM: number | string = date.getHours();
+        currAMPM = currAMPM < 12 ? 'AM' : 'PM';
+        return currAMPM;
+    }
+
+    function updateTime(): void {
+        setTime(noAMPM(new Date()));
+    }
+
+    function noAMPM(date: Date): string {
+        let hours: number | string = date.getHours();
+        let minutes: number | string = date.getMinutes();
+        hours = hours % 12;
+        hours = hours ? hours : 12;
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        let simpleTime: number | string = hours + ':' + minutes; 
+        return simpleTime;
+    }
+    return {
+        time,
+        ampm,
+        updateAMPM,
+        updateTime,
+        isAmPm,
+        noAMPM,
+    };
+};

@@ -1,0 +1,170 @@
+.navBarContainer {
+    width:100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+.navBar {
+    height: 100%;
+    width: 80px;
+    float: right;
+}
+
+.Color {
+    width:auto;
+    height: 40px;
+    padding: 10px;
+    font-weight:500;
+    overflow:hidden;
+}
+.Color:hover {
+    cursor:pointer;
+    opacity: 0.5;
+}
+.fontColor {
+    width:auto;
+    height: auto;
+    padding: 10px;
+}
+.fontColor:hover {
+    cursor:pointer;
+    opacity: 0.5;
+}
+
+
+
+.colorDrop {
+    transform: translateY(-10px);
+    width: auto;
+    position: absolute;
+    height: 400px;
+    display: none;
+    overflow-y: scroll;
+    border-radius: 8px;
+    top: 50px;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.colorDrop::-webkit-scrollbar {
+    display: none;
+}
+.colorDrop:hover {
+    display:block;
+}
+.Color:hover + .colorDrop {
+    display: block;
+}
+
+.fontColorDrop {
+    width: auto;
+    position: absolute;
+    height:400px;
+    display: none;
+    overflow-y: scroll;
+    border-radius: 8px;
+    z-index: 1;
+   
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.fontColorDrop::-webkit-scrollbar {
+    display: none;
+}
+.fontColorDrop:hover {
+    display:block;
+}
+.fontColor:hover + .fontColorDrop {
+    display: block;
+}
+
+.colorButton {
+    height: 30px;
+    width: 50px;
+    margin-left: 15px;
+    margin-top:8px;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.colorButton:hover {
+    cursor: pointer;
+    box-shadow: 0 0 16px rgba(0,0,0,0.6);
+}
+
+.fontColorButton {
+    height: 30px;
+    width: 50px;
+    margin-left: 15px;
+    margin-top:8px;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.fontColorButton:hover {
+    cursor:pointer;
+    box-shadow: 0 0 16px rgba(0,0,0,0.6);
+}
+
+@media screen and (max-height: 300px) {
+    .colorDrop, .fontColorDrop {
+        height: 120px !important;
+    }
+}
+@media screen and (max-height: 500px) {
+    .colorDrop, .fontColorDrop {
+        height: 240px;
+    }
+}
+
+.modeDrop {
+    transform: translateY(65px);
+    width: 80px;
+    position: absolute;
+    height: auto;
+    display: none;
+    border-radius: 8px;
+    text-align: center;
+    top: 50px;
+    z-index: 1;
+    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.modeDrop:hover {
+    display: block;
+}
+
+.mode:hover +.modeDrop {
+    display: block;
+}
+
+.mode {
+    width:auto;
+    height: 40px;
+    padding: 10px;
+    font-weight:500;
+    overflow:hidden;
+}
+.mode:hover {
+    cursor:pointer;
+    opacity: 0.5;
+}
+
+.modeBtn {
+    height: 30px;
+    width: 70px;
+    margin-bottom: 8px;
+    margin-top:8px;
+    border-radius: 20px;
+    outline: none;
+    border: 0;
+    box-shadow: 0 0 12px rgba(0,0,0,0.3);
+}
+.modeBtn:hover {
+    box-shadow: 0 0 16px rgba(0,0,0,0.6);
+    opacity:0.9;
+    cursor: pointer;
+}
+
+.modeBtn:active {
+    opacity:0.5;
+}

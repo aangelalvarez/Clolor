@@ -1,0 +1,64 @@
+.clockContainer{
+    width:auto;
+    height: auto;
+    margin: 0;
+    padding: 15px 30px;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%, -50%);
+    border-radius: 50px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.mainClockContent {
+    text-align: center;
+    font-size:25vw;
+    font-weight: 300;
+}
+
+.secondaryClockContent {
+    text-align: center;
+    font-size: 10vw;
+    font-weight: 500;
+}
+
+@media screen and (min-width: 1000px) {
+    .mainClockContent {
+        font-size: 20vw;
+        text-align: center;
+        font-weight: 200;
+    }
+    .secondaryClockContent {
+        text-align: center;
+        font-size: 6vw;
+        font-weight: 400;
+    }
+}
+
+@media screen and (max-height: 320px) and (min-width:400px) {
+    .mainClockContent {
+        text-align: center;
+        font-size:10vw;
+        font-weight: 200;
+    }
+    .secondaryClockContent {
+        text-align: center;
+        font-size: 5vw;
+        font-weight: 400;
+    }
+}
+
+
+@media screen and (max-height: 420px) and (min-width:800px) {
+    .mainClockContent {
+        text-align: center;
+        font-size:7vw;
+        font-weight: 200;
+    }
+    .secondaryClockContent {
+        text-align: center;
+        font-size: 3vw;
+        font-weight: 400;
+    }
+}
