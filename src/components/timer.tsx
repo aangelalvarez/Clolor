@@ -4,6 +4,7 @@ import UseTimer from '../hooks/usetimer';
 
  const Timer = () => {
 
+    //use the imported hooks
     const {
         color, 
         fontColor,

@@ -6,6 +6,7 @@ import { UseNavBar } from '../hooks/usenavbar';
 
 const NavBar: React.FC = () => {
  
+    //use the imported hooks
     const { mode, 
         colorMap, 
         fontColorMap, 

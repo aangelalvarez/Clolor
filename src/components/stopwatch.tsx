@@ -4,6 +4,7 @@ import '../styles/stopwatch.css';
 
 const StopWatch: React.FC = () => {
 
+    // use the imported hooks
     const {
         timer, 
         isActive, 

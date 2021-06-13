@@ -4,7 +4,8 @@ import '../styles/clock.css';
 
 
 const Clock: React.FC = () => {
-
+    
+    //use the imported hooks
     const {time, 
         ampm, 
         updateAMPM, 
