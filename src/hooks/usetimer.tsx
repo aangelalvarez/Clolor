@@ -1,4 +1,4 @@
-import { useState, useContext, useRef, useEffect } from 'react';
+import { useState, useContext, useRef } from 'react';
 import { ColorContext } from '../context/ColorContext';
 import { FontColorContext } from '../context/FontColorContext';
 
@@ -11,17 +11,20 @@ const UseTimer = () => {
     const [timer, setTimer] = useState<number>(0);
     const countRef = useRef<null | number | any>(null);
 
+    // start the timer
     const handleStart = (): void => {
             setIsActive(true);
             countRef.current = setInterval(() => {
                 setTimer((timer) => timer - 1)}, 1000)
     };
 
+    // pause the timer
     const handlePause = (): void => {
         clearInterval(countRef.current);
         setIsPaused(true);
     };
 
+    // resume the timer
     const handleResume = () => {
         setIsPaused(false);
         countRef.current = setInterval(() => {
@@ -29,12 +32,15 @@ const UseTimer = () => {
             }, 1000);
     };
 
+    // reset the timer
     const handleReset = (): void => {
         clearInterval(countRef.current);
         setIsActive(false);
         setIsPaused(false);
         setTimer(0);
     };
+    
+    // stop the timer and all the intervals running 
     const handleDismiss = (): void => {
         clearInterval(countRef.current);
         setIsActive(false);
@@ -42,6 +48,7 @@ const UseTimer = () => {
         setTimer(0);
     };
 
+    // format the time depending on how may seconds have passed
     const formatTime = (timer: number): string => {
         const getSeconds: string | number = `0${(timer % 60)}`.slice(-2);
         const minutes: string | number = `${Math.floor(timer / 60)}`;
@@ -53,6 +60,7 @@ const UseTimer = () => {
        
     }
 
+    // functions to increment the initial value of the timer
     const addSecond = (): void => {
         setTimer((timer) => timer + 1);
     };

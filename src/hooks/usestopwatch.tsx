@@ -11,17 +11,20 @@ export const useStopWatch = () => {
     const [isPaused, setIsPaused] = useState<boolean>(false);
     const countRef = useRef<null | number | any>(null);
 
+    // start stopwatch
     const handleStart = ():void => {
         setIsActive(true);
         countRef.current = setInterval(() => {
             setTimer((timer) => timer + 1)}, 1000)
     };
 
+    // pause stopwatch
     const handlePause = ():void => {
         clearInterval(countRef.current);
         setIsPaused(true);
     };
 
+    // resume stopwatch
     const handleResume = (): void => {
         setIsPaused(false);
         countRef.current = setInterval(() => {
@@ -29,6 +32,7 @@ export const useStopWatch = () => {
         }, 1000);
     };
 
+    // reset the stopwatch
     const handleReset = (): void => {
         clearInterval(countRef.current);
         setIsActive(false);
@@ -37,7 +41,7 @@ export const useStopWatch = () => {
     };
 
 
-
+    // format the time depending on how may seconds have passed
     const formatTime = (timer: number): string => {
         const getSeconds: string | number = `0${(timer % 60)}`.slice(-2);
         const minutes: string | number = `${Math.floor(timer / 60)}`;

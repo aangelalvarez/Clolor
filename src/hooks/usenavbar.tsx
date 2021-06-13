@@ -1,5 +1,3 @@
-import React from 'react'
-import { useState } from 'react';
 import { colors } from '../components/colors';
 import { ColorContext } from '../context/ColorContext';
 import { FontColorContext } from '../context/FontColorContext';
@@ -11,14 +9,17 @@ export const UseNavBar = () => {
     const {fontColor, setFontColor} = useContext(FontColorContext);
     const {mode, setMode} = useContext(ModeContext);
 
+    // colors for the background
     const colorMap= colors.map((color: string | any) => 
     <button onClick = {() => {setColor(color)}} className = 'colorButton' style = {{backgroundColor: color}}> </button>
     );
 
+    // colors for the font
     const fontColorMap= colors.map((fontColor: string | any) => 
     <button onClick = {() => {setFontColor(fontColor)}} className = 'fontColorButton' style = {{backgroundColor: fontColor}}> </button>
     );
 
+    // functions to change the mode when you click the mode buttons
     const changeModeClock = (): void => {
         setMode('clock');
     }
