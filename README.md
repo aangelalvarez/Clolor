@@ -6,8 +6,6 @@ You can visit it here: https://aangelalvarez.github.io/clolor
 
 ### Clolor also includes 3 different modes
 
-1. Clock - A classic clock with 12-hour format that displays hours and minutes
-
-2. StopWatch - Allows you to measure the time passed since you clicked start, it also allows you to stop, resume, and reset the stopwatch  
-
-3. Timer - Allows you to set a countdown timer, includes different functions to stop, resume, and reset the timer
+1. Clock
+2. StopWatch
+3. Timer 
