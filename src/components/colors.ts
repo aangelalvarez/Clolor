@@ -38,7 +38,6 @@ export const colors: Array<string> = [
     "DarkSeaGreen",
     "DarkSlateBlue",
     "DarkSlateGray",
-    "DarkSlateGrey",
     "DarkTurquoise",
     "DarkViolet",
     "DeepPink",
